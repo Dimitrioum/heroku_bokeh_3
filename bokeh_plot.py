@@ -37,7 +37,7 @@ cline = p1.circle(df['время формирования точки на БВ']
                  y_range_name="binary")
 dline = p1.circle(df['время формирования точки на БВ'], df[df['Cекция №1 Уровень НП'] < df['Cекция №1 Уровень НП'].quantile(.95)]['Cекция №1 Уровень НП'], line_width=2, color=Category10[3])
 
-eline = p1.circle(df['время формирования точки на БВ'], df['Cекция №3 Заливная горловина'], line_width=2, color=Category10[4],
+eline = p1.circle(df['время формирования точки на БВ'], df['Секция №3 Заливная горловина'], line_width=2, color=Category10[4],
                  y_range_name="binary")
 fline = p1.circle(df['время формирования точки на БВ'], df['Секция №3 Датчик на дне отсека'], line_width=2, color=Category10[5],
                  y_range_name="binary")
