@@ -13,17 +13,17 @@ from bokeh.plotting import reset_output
 reset_output()
 output_notebook()
 
-# bv1 = pd.read_csv('datasets/bv1_sensors_rus_v3.csv')
-bv2 = pd.read_csv('datasets/bv2_sensors_rus_v4.csv')
+bv1 = pd.read_csv('datasets/bv1_sensors_rus_v3.csv')
+# bv2 = pd.read_csv('datasets/bv2_sensors_rus_v4.csv')
 
-#bv1['время формирования точки на БВ'] = pd.to_datetime(bv1['время формирования точки на БВ'])
-#bv1['время прихода точки на сервере'] = pd.to_datetime(bv1['время прихода точки на сервере'])
+bv1['время формирования точки на БВ'] = pd.to_datetime(bv1['время формирования точки на БВ'])
+bv1['время прихода точки на сервере'] = pd.to_datetime(bv1['время прихода точки на сервере'])
 
-bv2['время формирования точки на БВ'] = pd.to_datetime(bv2['время формирования точки на БВ'])
-bv2['время прихода точки на сервере'] = pd.to_datetime(bv2['время прихода точки на сервере'])
+# bv2['время формирования точки на БВ'] = pd.to_datetime(bv2['время формирования точки на БВ'])
+# bv2['время прихода точки на сервере'] = pd.to_datetime(bv2['время прихода точки на сервере'])
 
-# df = bv1
-df = bv2
+df = bv1
+# df = bv2
 
 df['время формирования точки на БВ'] = pd.to_datetime(df['время формирования точки на БВ'], format='%d/%m/%Y')
 
@@ -128,6 +128,6 @@ layout = row(p1, checkboxes)
 # output_file('BV2_DUT_sensors_134_sections.html')
 # show(column(p1, p2, checkboxes))
 curdoc().add_root(layout)
-curdoc().title="BV2"
+curdoc().title="BV1"
 
 show(layout)
