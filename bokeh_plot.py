@@ -46,7 +46,7 @@ gline = p1.circle(df['время формирования точки на БВ']
 hline = p1.circle(df['время формирования точки на БВ'], df[df['Cекция №3 Уровень НП'] < df['Cекция №3 Уровень НП'].quantile(.95)]['Cекция №3 Уровень НП'], line_width=2, color=Category10[7])
 iline = p1.circle(df['время формирования точки на БВ'], df['Cекция №4 Заливная горловина'], line_width=2, color=Category10[8],
                  y_range_name="binary")
-jline = p1.circle(df['время формирования точки на БВ'], df['Cекция №4 Датчик на дне отсека'], line_width=2, color=Category10[9],
+jline = p1.circle(df['время формирования точки на БВ'], df['Секция №4 Датчик на дне отсека'], line_width=2, color=Category10[9],
                  y_range_name="binary")
 kline = p1.circle(df['время формирования точки на БВ'], df['Секция №4 Датчик в сливной магистрали'], line_width=2, color=Category10[10])
 # p2 = figure(x_axis_type='datetime', plot_width=10000)
